@@ -56,9 +56,8 @@ pipeline{
 			 credentialsId: 'default2', 
 			 namespace: 'default',
 			 serverUrl: 'https://kubernetes-dockertrainingrg-45125f-40e8c63c.hcp.centralindia.azmk8s.io:443') {
-
-
 			        sh 'kubectl get nodes'
+				sh 'kubectl apply -f deployment.yaml
 		        }
 		   }
   		}

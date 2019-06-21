@@ -13,4 +13,4 @@ spec:
           containers:
           - image: nginx
             name: warfile
-           restartPolicy: Always
+          restartPolicy: Never

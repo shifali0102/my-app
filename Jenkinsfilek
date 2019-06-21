@@ -50,12 +50,12 @@ pipeline{
   		   stage('Using kubernetes'){
 		   steps{
 		         
-{
+
 
 			        sh 'kubectl get nodes'
 		        }
 		   }
-  		}
+  		
 		}
 }
 

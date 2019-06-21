@@ -11,6 +11,6 @@ spec:
                app: kubia
        spec:
           containers:
-          - image: shifalisri0102/my-app:0.1
+          - image: nginx
             name: warfile
            restartPolicy: Always

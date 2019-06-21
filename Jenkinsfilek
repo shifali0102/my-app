@@ -50,13 +50,18 @@ pipeline{
 				
   		   stage('Using kubernetes'){
 		   steps{
-		         
+		         withKubeConfig(caCertificate: '',
+			 clusterName: 'kubernetescluster1',
+			 contextName: 'kubernetescluster1',
+			 credentialsId: 'default2', 
+			 namespace: 'default',
+			 serverUrl: 'https://kubernetes-dockertrainingrg-45125f-40e8c63c.hcp.centralindia.azmk8s.io:443') {
 
 
 			        sh 'kubectl get nodes'
 		        }
 		   }
-  		
+  		}
 		}
 }
 

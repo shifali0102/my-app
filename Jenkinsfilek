@@ -17,7 +17,8 @@ pipeline{
         	   stage('Checkout Stage'){
            		steps{
 				cleanWs()
-                  		git url: 'https://github.com/Shifali-Srivastava/my-app.git'
+				git credentialsId: 'a1549cac-b8de-4662-a105-74f227d536f7', url: 'git@github.com:Shifali-Srivastava/my-app.git'
+                  		
               			sh 'mvn clean'
 	       			}
           		}

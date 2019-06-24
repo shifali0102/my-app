@@ -1,14 +1,14 @@
 apiVersion: apps/v1beta1
 kind: Deployment
 metadata:
-      name: kubianew
+      name: kubianew1
 spec:
     replicas: 3
     template:
        metadata:
-             name: kubianew
+             name: kubianew1
              labels:
-               app: kubianew
+               app: kubianew1
        spec:
           containers:
           - image: shifali0102/my-app:0.1

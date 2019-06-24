@@ -4,3 +4,4 @@ MAINTAINER Shifali Srivastava "shifalisrivastava4343@gmail.com"
 ADD target/myweb-0.0.5.war /usr/local/tomcat/webapps/
 RUN echo "Hello world"
 #  RUN apt-get update
+CMD ["catalina.sh", "run"]

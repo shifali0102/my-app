@@ -57,9 +57,7 @@ pipeline{
 			 credentialsId: 'default2', 
 			 namespace: 'default',
 			 serverUrl: 'https://kubernetes-dockertrainingrg-45125f-40e8c63c.hcp.centralindia.azmk8s.io:443') {
-			 sh 'kubectl create secret docker-registry regcred --docker-server=https://cloud.docker.com/repository/docker/shifalisri0102 
-			 --docker-username=shifalisri0102 --docker-password=Aanchal01@
-			 --docker-email=shifalisrivastava4343@gmail.com'
+			 sh 'kubectl create secret docker-registry regcred --docker-server=https://cloud.docker.com/repository/docker/shifalisri0102 --docker-username=shifalisri0102 --docker-password=Aanchal01@ --docker-email=shifalisrivastava4343@gmail.com'
 			        sh 'kubectl get nodes'
 				sh 'kubectl apply -f deployment.yaml'
 		        }

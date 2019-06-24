@@ -1,7 +1,7 @@
 apiVersion: apps/v1beta1
 kind: Deployment
 metadata:
-      name: kubia
+      name: kubianew
 spec:
     replicas: 3
     template:

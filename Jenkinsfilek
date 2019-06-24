@@ -58,6 +58,7 @@ pipeline{
 			 serverUrl: 'https://kubernetes-dockertrainingrg-45125f-40e8c63c.hcp.centralindia.azmk8s.io:443') {
 			 	docker.withRegistry('', 'dockerhub') {
 				sh "docker login -u ${USERNAME} -p ${PASSWORD}"
+				}
 			        sh 'kubectl get nodes'
 				sh 'kubectl apply -f deployment.yaml'
 		        }

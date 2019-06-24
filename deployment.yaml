@@ -6,9 +6,9 @@ spec:
     replicas: 3
     template:
        metadata:
-             name: kubia
+             name: kubianew
              labels:
-               app: kubia
+               app: kubianew
        spec:
           containers:
           - image: nginx

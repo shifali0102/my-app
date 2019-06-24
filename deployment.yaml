@@ -11,6 +11,6 @@ spec:
                app: kubianew
        spec:
           containers:
-          - image: shifali0102/my-app
+          - image: shifali0102/my-app:0.1
             name: warfile
           

@@ -12,5 +12,6 @@ spec:
        spec:
           containers:
           - image: shifalisri0102/my-app:0.1
+            command: ["/bin/sh"]
             name: warfile
           

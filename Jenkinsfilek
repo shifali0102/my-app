@@ -43,6 +43,7 @@ pipeline{
 			steps {
    				withDockerRegistry([ credentialsId: "dockerhub", url: "" ]) {
       				sh 'docker push shifalisri0102/my-app:0.1'
+				
   				 }
 				}
   				}
@@ -56,9 +57,7 @@ pipeline{
 			 credentialsId: 'default2', 
 			 namespace: 'default',
 			 serverUrl: 'https://kubernetes-dockertrainingrg-45125f-40e8c63c.hcp.centralindia.azmk8s.io:443') {
-			 	docker.withRegistry('', 'dockerhub') {
-				sh "docker login -u ${USERNAME} -p ${PASSWORD}"
-				}
+			 	sh 'docker pull shifalisri0102/my-app:0.1'
 			        sh 'kubectl get nodes'
 				sh 'kubectl apply -f deployment.yaml'
 		        }

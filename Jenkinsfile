@@ -27,11 +27,3 @@ pipeline{
 		
 }
 }
-
-
-
-/* https://www.blazemeter.com/blog/how-to-use-the-jenkins-declarative-pipeline
-	https://www.edureka.co/blog/jenkins-pipeline-tutorial-continuous-delivery
-	
-	https://go.cloudbees.com/docs/cloudbees-documentation/use/automating-projects/jenkinsfile/
-	*/

@@ -14,19 +14,14 @@
 		    <artifactId>poi</artifactId>
 		    <version>3.7</version>
 		</dependency>
-		    <dependency>
-        <groupId>junit</groupId>
-        <artifactId>junit</artifactId>
-        <version>4.8.2</version>
-        <scope>test</scope> <!-- this could be just for tests -->
-     </dependency>
-		
-	</dependencies> 
-		
-
-		
-		
-		   
+	<!-- to run junit packages since the test classes had those packages-->
+		<dependency>
+        		<groupId>junit</groupId>
+        		<artifactId>junit</artifactId>
+        		<version>4.8.2</version>
+        		<scope>test</scope> <!-- this could be just for tests -->
+     		</dependency>
+	</dependencies> 	
 
 <build>
     <plugins>
@@ -38,41 +33,36 @@
                 <source>1.7</source>
                 <target>1.7</target>
             </configuration>
-        </plugin>
-	    
-	
-                   
-
-               
-            
+	    </plugin>
     </plugins>
 </build>
-	<reporting>
-  <plugins>
-	<!-- Normally, we take off the dependency report, saves time. -->
-	<plugin>
-		<groupId>org.apache.maven.plugins</groupId>
-		<artifactId>maven-project-info-reports-plugin</artifactId>
-		<version>2.7</version>
-		<configuration>
-			<dependencyLocationsEnabled>false</dependencyLocationsEnabled>
-		</configuration>
-	</plugin>
+	
+<reporting>
+	  <plugins>
+		  <!--added for enabling cobertura report visibility on dashboard itself-->
+		<!-- Normally, we take off the dependency report, saves time. -->
+		<plugin>
+			<groupId>org.apache.maven.plugins</groupId>
+			<artifactId>maven-project-info-reports-plugin</artifactId>
+			<version>2.7</version>
+			<configuration>
+				<dependencyLocationsEnabled>false</dependencyLocationsEnabled>
+			</configuration>
+		</plugin>
 
 	<!-- integrate maven-cobertura-plugin to project site -->
-	<plugin>
-		<groupId>org.codehaus.mojo</groupId>
-		<artifactId>cobertura-maven-plugin</artifactId>
-		<version>2.6</version>
-		<configuration>
-			<formats>
-				<format>html</format>
-				<format>xml</format>
-			</formats>
-		</configuration>
-	</plugin>
-
-   </plugins>
+		<plugin>
+			<groupId>org.codehaus.mojo</groupId>
+			<artifactId>cobertura-maven-plugin</artifactId>
+			<version>2.6</version>
+			<configuration>
+				<formats>
+					<format>html</format>
+					<format>xml</format>
+				</formats>
+			</configuration>
+		</plugin>
+	</plugins>
 </reporting>
 
 	

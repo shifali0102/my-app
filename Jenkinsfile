@@ -27,6 +27,13 @@ pipeline{
 	         	sh 'mvn sonar:sonar -Dsonar.host.url=http://52.172.158.204:9000/sonar/ '
 		     }
 	 	}
+	  stage('Testing Stage'){
+	        steps{
+		  		sh 'mvn test'
+	     	  	        junit 'target/surefire-reports/*.xml'	
+	      			 
+				 }
+			}
 		
    }
 }

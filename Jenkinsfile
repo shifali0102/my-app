@@ -31,7 +31,7 @@ pipeline{
 	        steps{
 		  		sh 'mvn test'
 	     	  	        junit 'target/surefire-reports/*.xml'
-			        sh 'mvn surefire-report:report'
+			      
 	      	             }
 			}
            stage('Code Coverage Test'){

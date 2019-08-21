@@ -30,9 +30,9 @@ pipeline{
 	  stage('Testing Stage'){
 	        steps{
 		  		sh 'mvn test'
-	     	  	        	junit 'target/surefire-reports/*.xml'
-	      			 
-				 }
+	     	  	        junit 'target/surefire-reports/*.xml'
+			        sh 'mvn surefire-report:report'
+	      	             }
 			}
 		
    }

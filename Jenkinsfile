@@ -34,6 +34,11 @@ pipeline{
 			        sh 'mvn surefire-report:report'
 	      	             }
 			}
+           stage('Code Coverage Test'){
+		  steps{
+				sh 'mvn cobertura:cobertura'
+		  }
+	   }
 		
    }
 }

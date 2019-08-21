@@ -1,0 +1,24 @@
+1.[a-z] ----> additions to pom.xml
+
+1. Java installed.
+2. Maven installed.
+3. Jenkins installed.
+4. create job on jenkins dashboard. 
+5. Allow using git and create username and password to access ur (private git repo).
+6. now sonarqube has to be integrated with jenkins
+get sonarqube scanner plugin in jenkins
+no configurations to be done in maven / pom.xml 
+u can add sonarqube server in jenkins global tool configuration
+or -Dsonar.url works better 
+7. now we have to do unit testing in jenkinsfile
+for that we need to have unit test files/classes in the correct path my-app/src/test/java/in/javahome/myweb/controller/
+then mvn test will take these classes execute the classes as per what is written in them in case of any dependencies 
+needed will pom.xml come into picture .
+for example in this case the test cases were not executed since the junit packages were not there hence we added the dependencies into pom.xml 
+1.a.    <dependency>
+        <groupId>junit</groupId>
+        <artifactId>junit</artifactId>
+        <version>4.8.2</version>
+        <scope>test</scope> <!-- this could be just for tests -->
+     </dependency>
+

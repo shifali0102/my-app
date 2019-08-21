@@ -38,6 +38,7 @@ pipeline{
 		  steps{
 				sh 'mvn cobertura:cobertura'
 			        sh 'mvn site'
+			        cobertura coberturaReportFile: 'target/site/cobertura/coverage.xml'
 		  }
 	   }
 		

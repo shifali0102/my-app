@@ -37,6 +37,7 @@ pipeline{
            stage('Code Coverage Test'){
 		  steps{
 				sh 'mvn cobertura:cobertura'
+			        sh 'mvn site'
 		  }
 	   }
 		

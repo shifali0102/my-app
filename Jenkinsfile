@@ -41,6 +41,11 @@ pipeline{
 			        cobertura coberturaReportFile: 'target/site/cobertura/coverage.xml'
 		  }
 	   }
+		stage('Performance Testing'){
+		  	steps{
+		           	   sh 'mvn verify -X'
+	                   	}
+	           	}
 		
    }
 }

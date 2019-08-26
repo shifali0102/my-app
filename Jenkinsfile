@@ -51,6 +51,12 @@ pipeline{
 				sh 'mvn war:war'
 			}
 		}
+		stage('Deploy')
+		{
+		  steps{
+				sh 'mvn deploy'
+			}
+		}
 		
 		
    }

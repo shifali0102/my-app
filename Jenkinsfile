@@ -46,6 +46,12 @@ pipeline{
 		           	   sh 'mvn verify'
 	                   	}
 	           	}
+		   stage('Package'){
+          		steps{
+				sh 'mvn war:war'
+			}
+		}
+		
 		
    }
 }

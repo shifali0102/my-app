@@ -43,7 +43,7 @@ pipeline{
 	   }
 		stage('Performance Testing'){
 		  	steps{
-		           	   sh 'mvn verify -X'
+		           	   sh 'mvn verify'
 	                   	}
 	           	}
 		

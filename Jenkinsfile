@@ -58,6 +58,11 @@ pipeline{
 			}
 		}
 		
+		stage('Functional Testing'){
+          		steps{
+				sh 'mvn integration-test'
+			}
+		}
 		
    }
 }

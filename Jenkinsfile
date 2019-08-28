@@ -11,10 +11,11 @@ pipeline{
   		}
 	stages{
            stage('Checkout Stage'){
-               steps{
+		   steps{
+			   cleanWs()
                   git url: 'https://github.com/shifali0102/my-app.git'
                  sh 'mvn clean'
-		       cleanWs()
+		      
 	       	}
           	}
 	

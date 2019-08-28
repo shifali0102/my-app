@@ -3,10 +3,12 @@ import java.io.IOException;
 	import org.openqa.selenium.WebDriver;
 	import org.openqa.selenium.chrome.ChromeOptions;
 	import org.openqa.selenium.chrome.ChromeDriver;
-	
+	import junit.framework.TestCase;
+	import junit.framework.Assert;
+
+	public class TecAdminSeleniumTestIT extends TestCase {
 	 
-	public class TecAdminSeleniumTestIT {
-	 
+		Calculator cal = new Calculator();
 	        public static void main(String[] args) throws IOException, InterruptedException {
 	                System.setProperty("webdriver.chrome.driver", "/usr/bin/chromedriver");
 	                ChromeOptions chromeOptions = new ChromeOptions();
@@ -26,4 +28,8 @@ import java.io.IOException;
 	                }
 	                driver.quit();
 	        }
+		
+		public void testMultiply() {
+		Assert.assertEquals(cal.multiply(10, 20), 200);
+	}
 	}

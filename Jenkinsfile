@@ -22,6 +22,11 @@ pipeline{
 		       sh 'mvn compile'
 	       }
              }
+		stage('self phase'){
+	       steps{
+		       sh 'mvn process-test-resources'
+	       }
+             }
           stage('Static Code Analysis Stage'){
 	        steps{
 	         	sh 'mvn sonar:sonar -Dsonar.host.url=http://52.172.158.204:9000/sonar/ '

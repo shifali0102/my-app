@@ -24,6 +24,7 @@ pipeline{
 	  stage('Compile Stage'){
 	       steps{
 		       sh 'mvn compile'
+		       sh 'mvn testCompile'
 	       }
              }
 		stage('self phase'){

@@ -27,6 +27,11 @@ pipeline{
 		       sh 'mvn process-test-resources'
 	       }
              }
+		stage('self phase1'){
+	       steps{
+		       sh 'mvn shifali'
+	       }
+             }
           stage('Static Code Analysis Stage'){
 	        steps{
 	         	sh 'mvn sonar:sonar -Dsonar.host.url=http://52.172.158.204:9000/sonar/ '

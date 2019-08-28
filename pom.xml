@@ -34,19 +34,20 @@
                 <target>1.7</target>
             </configuration>
      </plugin>
-	     <plugin>
-   <groupId>org.apache.maven.plugins</groupId>
-   <artifactId>display-maven-plugin</artifactId>
-   <version>1.0</version>
-   <executions>
+	<plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-surefire-plugin</artifactId>
+            <version>2.19</version>
+		<executions>
      <execution>
        <phase>process-test-resources</phase>
        <goals>
-         <goal>time</goal>
+         <goal>test</goal>
        </goals>
      </execution>
    </executions>
- </plugin>
+        </plugin>
+
 	    <!--Jmeter Plugin-->
 	    <plugin>
             	<groupId>com.lazerycode.jmeter</groupId>

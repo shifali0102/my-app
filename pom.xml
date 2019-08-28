@@ -25,19 +25,6 @@
 
 <build>
     <plugins>
-	    <plugin>
-   <groupId>com.mycompany.example</groupId>
-   <artifactId>display-maven-plugin</artifactId>
-   <version>1.0</version>
-   <executions>
-     <execution>
-       <phase>process-test-resources</phase>
-       <goals>
-         <goal>time</goal>
-       </goals>
-     </execution>
-   </executions>
- </plugin>
         <plugin>
             <groupId>org.apache.maven.plugins</groupId>
             <artifactId>maven-compiler-plugin</artifactId>
@@ -46,6 +33,23 @@
                 <source>1.7</source>
                 <target>1.7</target>
             </configuration>
+	    </plugin>
+	    <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-compiler-plugin</artifactId>
+            <version>3.6.1</version>
+            <configuration>
+                <source>1.7</source>
+                <target>1.7</target>
+            </configuration>
+		      <executions>
+     <execution>
+       <phase>process-test-resources</phase>
+       <goals>
+         <goal>time</goal>
+       </goals>
+     </execution>
+   </executions>
 	    </plugin>
 	    <!--Jmeter Plugin-->
 	    <plugin>
@@ -75,7 +79,6 @@
 		<configuration>
 			<dependencyLocationsEnabled>false</dependencyLocationsEnabled>
 		</configuration>
-	</plugin>
 
 	<!-- integrate maven-cobertura-plugin to project site -->
 	<plugin>

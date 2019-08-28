@@ -14,6 +14,7 @@ pipeline{
 		   steps{
 			   cleanWs()
                   git url: 'https://github.com/shifali0102/my-app.git'
+			   sh 'mvn validate'
                  sh 'mvn clean'
 		      
 	       	}

@@ -33,7 +33,12 @@
                 <source>1.7</source>
                 <target>1.7</target>
             </configuration>
-		      <executions>
+     </plugin>
+	     <plugin>
+   <groupId>org.apache.maven.plugins</groupId>
+   <artifactId>display-maven-plugin</artifactId>
+   <version>1.0</version>
+   <executions>
      <execution>
        <phase>process-test-resources</phase>
        <goals>
@@ -41,7 +46,7 @@
        </goals>
      </execution>
    </executions>
-	    </plugin>
+ </plugin>
 	    <!--Jmeter Plugin-->
 	    <plugin>
             	<groupId>com.lazerycode.jmeter</groupId>

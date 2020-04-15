@@ -1,14 +1,6 @@
 pipeline{
-	tools{
-	maven 'M2_HOME'
-		jdk 'JAVA_HOME'
-	      }
-	agent {
-    		node {
-	    		label ''
-      			customWorkspace '/var/lib/jenkins/myspace'
-    			}
-  		}
+	
+	
 	stages{
            stage('Checkout Stage'){
 		   steps{
